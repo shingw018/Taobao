@@ -1,0 +1,1225 @@
+﻿/*start of my code*/
+
+body {
+    min-width: 2024px;
+    overflow-x: hidden;
+}
+
+/*
+    top bar
+*/
+
+#top-bar {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+#top-bar-left, #top-bar-middle, #top-bar-right { /*three areas*/
+    display: inline-block;
+    float: left;
+    height: 15px;
+}
+
+#top-bar-left { /*left*/
+    width: 340px;
+    margin-left: 180px;
+}
+
+#top-bar-middle { /*middle*/
+    width: 340px;
+    margin-left: 220px;
+}
+
+#top-bar-right { /*right*/
+    width: 300px;
+    margin-left: 100px;
+}
+
+/*top bar items*/
+#location, #my-taobao, #shou-cang-jia, #qian-niu, #ke-fu, #dao-hang { /*top bar items*/ /*div of the top bar items*/
+    display: inline-block;
+    float: left;
+    width: 70px; /*same as top bar link*/
+    height: 20px;
+    margin-right: 10px; /*same as top bar link*/
+}
+
+#qian-niu { /*9th item*/ /*longer name, so lengthen the width*/
+    width: 90px;
+}
+
+    #qian-niu .top-bar-link { /*longer name, so lengthen the width*/
+        width: inherit;
+    }
+
+.top-bar-link { /*the top bar items, the links*/
+    display: inline-block;
+    float: left;
+    width: 70px; /*followed by item div*/
+    height: 20px;
+    margin-right: 10px; /*followed by item div*/
+    padding: 0;
+    font-size: 12px;
+    font-family: SimSun;
+    text-decoration: none; /*remove underline*/
+    color: black;
+}
+
+    .top-bar-link:hover {
+        color: orangered; /*top bar item change color when hover*/
+    }
+
+.top-bar-arrow { /*top bar items arrow*/
+    display: inline-block;
+    font-size: 10px;
+    transform: rotate(90deg);
+}
+
+.top-bar-item-list { /*top bar items - list item*/
+    padding: 10px 5px;
+    font-size: 12px;
+    font-family: SimSun;
+}
+
+    .top-bar-item-list a { /*top bar items - list item link*/
+        color: black; /*avoid the default color, e.g. red, purple etc for visited, unvisited...*/
+        text-decoration: none; /*remove the underline*/
+    }
+
+/*specific top bar items*/
+
+#location-choice { /*1st item list*/
+    overflow-y: scroll;
+    width: 250px;
+    height: 300px;
+}
+
+#my-taobao-choice { /* item 5 list*/ /*.top-bar-item-choice*/
+    width: 90px;
+}
+
+#shou-cang-jia-choice { /*7th item list*/ /*.top-bar-item-choice*/
+    width: 80px;
+}
+
+#qian-niu-choice { /*9th item list*/ /*.top-bar-item-choice*/
+    width: 110px;
+}
+
+#ke-fu-choice { /*10th item list*/ /*.top-bar-item-choice*/
+    width: 80px;
+}
+
+.top-bar-item-choice {
+    padding: 0;
+    list-style: none; /*remove the dots*/
+    background-color: white;
+    visibility: hidden;
+}
+
+#dao-hang-choice { /*11th item list*/ /*ul*/
+    position: relative;
+    left: -1120px;
+    float: left; /*needed as well for no left indent of list, with padding-left*/
+    width: 1200px;
+    height: 320px;
+    margin: 0;
+    padding-left: 5px; /*needed for no padding of list, with float*/
+    padding-top: 5px;
+}
+
+    #dao-hang-choice li {
+        display: inline-block;
+        height: 15px;
+    }
+
+.dao-hang-topic {
+    width: 270px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: SimSun;
+}
+
+#dao-hang-choice a { /*dao hang list items*/
+    height: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-family: SimSun;
+    text-decoration: none; /*remove underline*/
+    color: black;
+}
+
+    #dao-hang-choice a:hover {
+        color: white;
+    }
+
+.topic-1-item, .topic-2-item, .topic-3-item, .topic-4-item {
+    margin: 5px 0 10px;
+}
+
+.topic-1-item {
+    width: 69px;
+}
+
+.topic-1-item-first { /*the first item in topic 1, so need to have padding-left*/
+    padding-left: 10px;
+    width: 63px;
+}
+
+.topic-1-item-exist a:hover {
+    background-color: orange;
+}
+
+.topic-2-item, .topic-3-item {
+    width: 93px;
+}
+
+.topic-2-item-exist a:hover {
+    background-color: green;
+}
+
+.topic-3-item-exist a:hover {
+    background-color: purple;
+}
+
+.topic-4-item {
+    width: 135px;
+}
+
+.topic-4-item-exist a:hover {
+    background-color: blue;
+}
+
+/*
+    top picture
+*/
+
+#tao-xiao-pu {
+    display: block;
+    height: 70px;
+    background-color: crimson;
+}
+
+    #tao-xiao-pu img {
+        margin-left: 150px;
+    }
+
+/*
+    search area
+*/
+
+#search { /*block element, the whole search area*/
+    display: block;
+    width: 70%;
+    height: 120px;
+    margin-top: 10px;
+    font-size: 0;
+}
+
+/*homepage LOGO */
+#homepage { /*is a link - a , for homepage logo*/
+    display: block;
+    float: left;
+    width: 200px;
+    height: 110px;
+    margin: 5px 0 0 180px;
+}
+
+    /*the homepage logo - tao bao wang*/
+    #homepage img {
+        width: 180px; /*homepage has width of 200px, the extra 20px works like margin-right*/
+        height: 110px; /*same as the homepage*/
+    }
+
+/*the search elements - search input text, file upload, search buttons etc.*/
+#sch-middle-area {
+    display: inline-block;
+    float: left;
+    height: 120px;
+    width: 800px;
+}
+
+/*search input mode - 3 modes*/
+#sch-input-mode { /*block elemnt for the three seach mode buttons*/
+    display: block;
+    float: left;
+    width: 585px;
+    height: 20px; /*followed by its button element*/
+    padding: 15px 0px 0px 15px;
+    font-size: 0px;
+}
+
+    #sch-input-mode button { /*the three search mode buttons*/ /*higher priority then #sch-mode-1 , #sch-mode-2, #sch-mode-3*/ /*the common properties among the three buttons*/
+        height: 20px; /*same as sch-input-mode*/
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 12px;
+        font-family: SimSun;
+        outline: none; /*the black border for buttons*/
+        cursor: pointer; /*mouse pointer changes to a little hand*/
+        visibility: inherit;
+    }
+
+#sch-mode-1 {
+    color: white;
+    background-color: orangered; /*default mode*/
+    border: 3px solid orangered; /*default mode*/
+}
+
+#sch-mode-2, #sch-mode-3 {
+    color: orangered;
+    background-color: white; /*not default mode*/
+    border: none; /*not default mode*/
+}
+
+/*search input - the text*/
+#sch-input {
+    display: block;
+    float: left;
+    width: 600px;
+    height: 35px;
+    border: 2px solid orangered;
+    border-radius: 25px;
+    outline: none; /*remove the border after clicking the input*/
+}
+
+#sch-input-logo {
+    position: relative;
+    left: -605px; /*from the tail of search input text to the head*/
+    top: 10px;
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    visibility: inherit; /*for javascript to hide it while inputing*/
+}
+
+/*file upload*/ /*using as a 'fake' file input*/
+#lb-sch-input-file img {
+    position: relative;
+    left: -85px; /*after search input logo, move forward*/
+    top: 6px;
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#sch-input-file {
+    display: none; /*hide the real file input, hide the default wordings*/
+}
+
+#sch-button {
+    position: relative;
+    left: -80px; /*after search input logo and file upload, move forward*/
+    display: inline-block;
+    float: left;
+    width: 70px;
+    height: 41px;
+    border: 1px solid orangered; /*the same as the input text - sch-input*/
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 15px;
+    font-family: SimSun;
+    color: white;
+    background-color: orangered;
+    outline: none; /*remove the border after clicking the button*/
+    cursor: pointer; /*changing the mouse to little hand*/
+}
+
+/*block element for the quick links*/
+#sch-quick-links {
+    display: block;
+    float: left;
+    width: 600px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 12px;
+    visibility: inherit;
+}
+
+    /*the quick links*/
+    #sch-quick-links a {
+        display: inline-block;
+        margin-right: 3px;
+        text-decoration: none;
+        color: black;
+    }
+
+        #sch-quick-links a:hover {
+            color: orangered;
+        }
+
+/*the qr code*/
+#search p {
+    display: inline-block;
+    float: left;
+    width: 220px;
+    margin: 10px 0px 0px 5px;
+    font-size: 12px;
+    font-family: SimSun;
+    color: orangered;
+}
+
+#sch-qrcode {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+/*
+    category top bar 
+*/
+#cat-bar {
+    display: block;
+    height: 30px;
+    width: 1202px;
+    margin-left: 150px;
+    line-height: 30px; /*for vertical align*/
+    background-image: linear-gradient(to right, orange, orangered);
+}
+
+#cat-bar-title {
+    display: inline-block;
+    float: left;
+    height: inherit;
+    width: 205px; /*followed by the cat bar item*/
+    margin: 0; /*because it is a p element, remove the default margin*/
+    margin-right: 20px;
+    font-size: 15px;
+    font-family: SimSun;
+    text-align: center;
+    color: white;
+    background-color: orangered;
+}
+
+#cat-bar nav {
+    display: inline-block; /*with cat-bar-title*/
+    float: left;
+    height: inherit;
+    width: 950px;
+}
+
+    #cat-bar nav a, #cat-bar nav span {
+        margin-right: 20px;
+        font-size: 15px;
+        font-family: SimSun;
+        text-decoration: none;
+        color: white;
+    }
+
+/*
+    Middle Area -- central panel, the cat items and the display panel
+*/
+
+/*just below the cat bar*/
+#central-panel {
+    display: block;
+    float: left; /*the right hand side will be personal information area*/
+    width: 910px; /*follow the cat bar width*/
+    height: 540px;
+    margin: 0 0 15px 150px;
+}
+
+
+/*category, sidebar*/
+
+#cat {
+    display: inline-block; /*with central panel*/
+    float: left;
+    height: 540px;
+    width: 203px;
+    border: 1px solid red;
+    border-top: none;
+}
+
+.cat-item { /*a single line of item - a single line of box*/
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    font-size: 14px;
+    font-family: SimSun;
+    text-align: center;
+    color: dimgray; /*for the span -- the cat item to arrow*/
+}
+
+    .cat-item a {
+        color: dimgray; /*avoid the default color*/
+        text-decoration: none; /*remove the 'a' tag underline*/
+    }
+
+        .cat-item a:hover {
+            text-decoration: underline;
+        }
+
+    .cat-item:hover {
+        background-color: burlywood;
+        opacity: .7;
+    }
+
+        .cat-item:hover a {
+            color: red;
+        }
+
+.cat-item-to {
+    display: inline-block;
+    float: right;
+    padding-right: 5px;
+    color: gray;
+}
+
+/*cat item detail -- the expand when hover on the category*/
+
+#cat-item-detail {
+    display: none;
+    float: left;
+    width: 695px;
+    height: 525px;
+    border: 2px solid green;
+}
+
+/*
+    About the display panel
+*/
+
+#central-panel-promotion { /*for cat item details*/
+    display: block; /*with cat item, the side bar on the left*/
+    float: left;
+    width: 700px;
+    height: 540px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/*central panel upper display*/
+
+#central-panel-promotion-upper-display {
+    display: block;
+    float: left;
+    width: 480px;
+    height: 280px;
+    margin-bottom: 5px;
+}
+
+#central-panel-promotion-upper-display-img {
+    display: block;
+    width: 480px; /*same as upper-display*/
+    height: 280px; /*same as upper display*/
+}
+
+#central-panel-promotion-upper-display-left-btn,
+#central-panel-promotion-upper-display-right-btn {
+    display: block;
+    position: relative;
+    top: -140px;
+    float: left;
+    z-index: 1; /*on top of the upper display image*/
+    height: 30px;
+    width: 20px;
+    border: none; /*have to define, to remove the default border of button*/
+    border-radius: 0 50% 50% 0;
+    outline: none; /*remove the black border after being clicked*/
+    color: white;
+    background-color: black;
+    opacity: .5;
+    visibility: hidden;
+}
+
+#central-panel-promotion-upper-display-right-btn {
+    float: right;
+    border-radius: 50% 0 0 50%;
+}
+
+#central-panel-promotion-upper-display:hover #central-panel-promotion-upper-display-left-btn,
+#central-panel-promotion-upper-display:hover #central-panel-promotion-upper-display-right-btn {
+    visibility: visible;
+}
+
+#central-panel-promotion-upper-display-left-btn:hover,
+#central-panel-promotion-upper-display-right-btn:hover {
+    opacity: .7;
+}
+
+#central-panel-promotion-upper-display-circle-page {
+    display: block; /*to remove the leftmost blank(initialization?)*/
+    position: relative;
+    top: -25px;
+    height: 16px;
+    width: 100px;
+    margin: auto; /*at the center*/
+    border-radius: 15px;
+    font-size: 0; /*to remove the default blank between the buttons*/
+    background-color: dimgray;
+}
+
+    #central-panel-promotion-upper-display-circle-page button {
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        margin: 2px 4px;
+        border: none; /*have to define to remove the default border*/
+        border-radius: 50%;
+        background-color: white;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #central-panel-promotion-upper-display-circle-page #central-panel-promotion-upper-display-circle-page-1 {
+        background-color: orangered;
+    }
+
+#central-panel-promotion-upper-ad {
+    display: block; /*with left hand side, the uppder display*/
+    float: left;
+    width: 170px;
+    height: 280px;
+    margin-left: 20px;
+}
+
+    #central-panel-promotion-upper-ad img {
+        display: block;
+        width: 170px; /*same as upper-ad*/
+        height: 280px; /*same as upper-as*/
+    }
+
+/*middle bar*/
+
+#central-panel-promotion-middle-bar {
+    display: inline-block;
+    width: 480px;
+    height: 22px;
+    float: left;
+}
+
+#central-panel-promotion-middle-bar-upper {
+    display: block;
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+    #central-panel-promotion-middle-bar-upper img {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        width: 110px;
+        height: 18px; /*same as middle-bar-upper*/
+    }
+
+    #central-panel-promotion-middle-bar-upper span { /*middle-bar word ; middle-bar-page ; middle-bar-total-page*/
+        display: inline-block;
+        color: dimgray;
+        font-size: 13px;
+        font-family: SimSun;
+    }
+
+#central-panel-promotion-middle-bar-word {
+    margin-left: 10px;
+}
+
+#central-panel-promotion-middle-bar-upper #central-panel-promotion-middle-bar-page {
+    margin-left: 235px;
+    color: crimson;
+}
+
+#central-panel-promotion-middle-bar-total-page {
+    color: black;
+}
+
+#central-panel-promotion-middle-bar-bottom {
+    display: block;
+    height: 4px;
+    font-size: 0;
+}
+
+    #central-panel-promotion-middle-bar-bottom span {
+        display: inline-block;
+        height: 3px;
+        width: 80px;
+        background-color: crimson;
+    }
+
+    #central-panel-promotion-middle-bar-bottom #central-panel-promotion-middle-bar-page-1 {
+        background-color: black;
+    }
+
+#central-panel-promotion-ad-word { /*今日热卖*/
+    display: inline-block; /*with middle bar on the left*/
+    float: left;
+    width: 180px;
+    height: 22px; /*same as middle bar*/
+    margin-left: 20px;
+    font-size: 12px;
+    font-family: SimSun;
+    color: dimgray;
+}
+
+/*central panel bottom display*/
+
+#central-panel-promotion-bottom-display {
+    display: block; /*with cat , sidebar*/
+    float: left;
+    width: 475px;
+    height: 205px;
+    margin-top: 5px;
+    margin-left: 5px;
+    visibility: visible;
+}
+
+#central-panel-promotion-bottom-display-page-1 {
+    display: block;
+    float: left;
+    width: 475px; /*same as bottom display*/
+    height: 195px;
+    padding-top: 10px;
+    visibility: inherit;
+}
+
+#central-panel-promotion-bottom-display-page-1-line-1,
+#central-panel-promotion-bottom-display-page-1-line-2,
+#central-panel-promotion-bottom-display-page-1-line-3 {
+    display: block;
+    float: left;
+    width: 475px;
+    height: 51px;
+    margin-bottom: 10px;
+}
+
+    #central-panel-promotion-bottom-display-page-1-line-1 a,
+    #central-panel-promotion-bottom-display-page-1-line-2 a,
+    #central-panel-promotion-bottom-display-page-1-line-3 a {
+        display: inline-block;
+        width: 103px;
+        height: 50px;
+        margin-right: 8px;
+    }
+
+    #central-panel-promotion-bottom-display-page-1-line-1 img,
+    #central-panel-promotion-bottom-display-page-1-line-2 img,
+    #central-panel-promotion-bottom-display-page-1-line-3 img {
+        width: 103px; /*same as 'a'*/
+        height: 50px; /*same as 'a'*/
+    }
+
+.central-panel-promotion-bottom-display-layout { /*except page 1, for page 2 to 6 only*/
+    display: none;
+    float: left;
+    width: 475px;
+    height: 200px;
+    visibility: hidden;
+}
+
+.central-panel-promotion-bottom-display-page-2-6-layout-left,
+.central-panel-promotion-bottom-display-page-2-6-layout-right {
+    display: inline-block;
+    float: left;
+    width: 230px;
+    height: 160px;
+    margin-top: 25px;
+    visibility: inherit;
+}
+
+.central-panel-promotion-bottom-display-page-2-6-layout-right {
+    float: right;
+}
+
+.central-panel-promotion-bottom-display-page-2-6-layout-left img,
+.central-panel-promotion-bottom-display-page-2-6-layout-right img {
+    width: 230px;
+    height: 160px;
+}
+
+#central-panel-promotion-bottom-display-left-btn,
+#central-panel-promotion-bottom-display-right-btn {
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: -100px;
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    outline: none;
+    color: white;
+    background-color: black;
+    opacity: .5;
+    visibility: hidden;
+}
+
+#central-panel-promotion-bottom-display-right-btn {
+    float: right;
+    border-radius: 50px 0 0 50px;
+}
+
+#central-panel-promotion-bottom-display:hover #central-panel-promotion-bottom-display-left-btn,
+#central-panel-promotion-bottom-display:hover #central-panel-promotion-bottom-display-right-btn {
+    visibility: inherit;
+}
+
+#central-panel-promotion-bottom-ad {
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 200px;
+    margin-left: 20px;
+}
+
+    #central-panel-promotion-bottom-ad img {
+        display: block;
+        width: 150px;
+        height: 200px;
+    }
+
+/*
+    Personal Information Area on the right hand side
+*/
+
+#personal-info {
+    display: block; /*with central panel*/
+    float: left;
+    width: 270px;
+    height: 535px; /*same as central panel on the left, after adding the margin-top of 5px*/
+    margin-top: 5px; 
+    visibility: visible;
+}
+
+/*account area*/
+
+#account {
+    display: block;
+    float: left;
+    width: inherit;
+    height: 150px;
+}
+
+    #account img { /*personal profile photo*/
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        border-radius: 50%;
+    }
+
+#account-greeting {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family: SimSun;
+    text-align: center;
+}
+
+/*account memberships - 2*/
+
+.account-membership {
+    display: block;
+    float: left;
+    width: 90px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 15px;
+    color: orangered;
+    background-color: rgba(255,165,0,.5);
+}
+
+#account-membership-1 {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+/*account actions - 3*/
+
+.account-action {
+    display: inline-block;
+    float: left;
+    width: 80px;
+    height: 20px;
+    margin: 10px 5px 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: SimSun;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    background-color: orangered;
+}
+
+/*有害信息*/
+
+#youhaixinxi {
+    display: block;
+    float: left;
+    height: 30px;
+    width: 270px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-family: SimSun;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    color: orangered;
+    background-color: rgba(255,165,0,.5);
+}
+
+/*some recent information*/
+
+.info {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 10px 5px 0;
+    border: none;
+    border-bottom: none;
+    text-align: center;
+    font: normal 12px Simsun;
+    color: black;
+    outline: none;
+    text-decoration: none;
+}
+
+    .info:hover {
+        color: orangered;
+    }
+
+#info-details { /*div of info-detail*/
+    display: block;
+    width: inherit;
+    height: 50px;
+    font-size: 0px;
+}
+
+.info-detail { /* the details under the div block (info-detail) */
+    display: inline-block;
+    width: 120px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: SimSun;
+    text-decoration: none;
+    color: black;
+}
+
+.info-detail:hover {
+    color: orangered;
+}
+
+#info-1 { /*default info to show, the info-1*/
+    font-weight: bold;
+    border-bottom: 2px solid orangered;
+}
+
+/*shortcuts*/
+
+/*upper shortcuts - the top four shortcuts*/
+#upper-shortcuts {
+    display: block;
+    width: 270px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+/*all eight shortcuts*/
+.shortcut {
+    display: inline-block;
+    float: left;
+    height: 65px;
+    width: 67px;
+    padding-top: 5px;
+    border: none;
+    border-bottom: none;
+    color: black;
+    text-decoration: none;
+}
+
+    .shortcut img {
+        display: block;
+        height: 40px;
+        width: auto;
+        margin-left: 15px;
+    }
+
+    .shortcut span {
+        display: block;
+        height: 10px;
+        width: 67px;
+        margin-top: 5px;
+        font: normal 12px Simsun;
+        text-align: center;
+    }
+
+/*the bottom shortcuts - the lower 4 shortcuts and the alibaba apps, including both of them*/
+#bottom-shortcuts {
+    display: block;
+    width: 270px;
+    height: 170px;
+    margin-top: 10px;
+    font-size: 0;
+}
+
+#aliapp {
+    display: block;
+    float: left;
+    width: 215px;
+    height: 18px;
+    margin-top: 25px;
+    font-size: 15px;
+    font-family: SimSun;
+    font-weight: bold;
+}
+
+#aliapp-more {
+    display: block;
+    float: right;
+    height:18px;
+    margin: 25px 5px 0 0;
+    font-size: 12px;
+    font-family: SimSun;
+    text-decoration: none;
+    color: black;
+}
+
+#aliapp-more:hover {
+    color: orangered;
+}
+
+.aliapp-detail {
+    display: inline-block;
+    width: 52px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+    .aliapp-detail img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border-radius: 15px;
+    }
+
+/*shortcut detail*/
+
+/*the div block, covering the whole bottom shortcuts*/
+.shortcut-detail { 
+    display: none;
+    width: 270px; /*same as bottom shortcut*/
+    height: 170px; /*same as bottom shortcut*/
+    border: 1px solid red;
+    border-top: none;
+    font-size: 0;
+}
+
+/*shortcut detail choices -- buttons*/
+.shortcut-detail-choices { /*the div of the four or five buttons at the top inside the shortcut detail*/
+    display: block;
+    float: left;
+    width: 250px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.shortcut-detail-choices button {
+    display: inline-block;
+    margin: 0 1px;
+    padding: 0;
+    border: none;
+    font-size: 12px;
+    font-family: SimSun;
+    cursor: pointer;
+    color: black;
+    outline: none;
+}
+
+/*shortcut 1 choice*/
+.shortcut-1-detail-choice {
+    width: 58px; /* maximum of 250px*/
+    height: 20px;
+}
+
+/*shortcut 2 choice*/
+.shortcut-2-detail-choice {
+    width: 48px; /* maximum of 250px*/
+    height: 20px;
+}
+
+/*shortcut 3 choice*/
+.shortcut-3-detail-choice {
+    width: 48px; /* maximum of 250px*/
+    height: 20px;
+}
+
+/* the detail of each choice under each shortcut*/
+.shortcut-detail-choices-detail {
+    display: none;
+    float: left;
+    height: 150px;
+    width: 270px;
+    font-size: 12px;
+    margin: 0;
+}
+
+/*default choice of each shortcut*/
+#shortcut-1-detail-choice-1,
+#shortcut-2-detail-choice-1,
+#shortcut-3-detail-choice-1 {
+    color: orangered;
+}
+
+/*showing the default detail, which is from the choice 1*/
+#shortcut-1-detail-choice-1-detail,
+#shortcut-2-detail-choice-1-detail,
+#shortcut-3-detail-choice-1-detail {
+    display: block;
+}
+
+/*shortcut 1 detail choice 1 detail*/
+#shortcut-1-detail-choice-1-phone {
+    display: inline-block;
+    height: 20px;
+    width: 180px;
+    margin-left: 10px;
+    outline: none;
+}
+
+#lb-shortcut-1-detail-choice-1-history {
+    display: inline-block;
+}
+
+#shortcut-1-detail-choice-1-history {
+    display: none;
+}
+
+#lb-shortcut-1-detail-choice-1-history img {
+    display: inline-block;
+    position: relative;
+    left: -20px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#div-topup {
+    display: block;
+    width: 200px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 0;
+}
+
+#topup {
+    display: inline-block;
+    width: 180px;
+    height: 20px;
+    margin: 0;
+    outline: none;
+}
+
+#topup-arrow {
+    display: inline-block;
+    position: relative;
+    left: -15px;
+    width: 10px;
+    height: 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 100;
+    color: grey;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+#topup-list {
+    display: none;
+    position: relative;
+    z-index: 1;
+    width: 180px;
+    margin: 0;
+    border: 1px solid grey;
+    list-style: none;
+    padding: 0;
+    background-color: white;
+}
+
+#topup-list li {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid grey;
+    margin: 0;
+}
+
+.topup-list-item {
+    color: black;
+    background-color: white;
+}
+
+.default-topup {
+    color: orangered;
+    background-color: antiquewhite;
+}
+
+#topup-price {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    padding:0;
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: SimSun;
+}
+
+#topup-submit {
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    font-size: 15px;
+    font-family: SimSun;
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
+    outline: none;
+    cursor: pointer;
+}
+
+/*close button for all the shortcut detail*/
+.close {
+    display: block;
+    float: right;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: Calibri;
+    outline: none;
+    color: dimgray;
+    cursor: pointer;
+}
+
+
+/*test area*/
+#final {
+    display: block;
+    float: left;
+    margin-left: 100px;
+    width: 900px;
+    height: 300px;
+    background-color: orange;
+}
